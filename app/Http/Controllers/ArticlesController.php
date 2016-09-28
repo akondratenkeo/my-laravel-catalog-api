@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Http\Requests;
 use Carbon\Carbon;
-use Request;
+use App\Http\Requests\CreateArticleRequest;
+use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
     public function index()
     {
-        $articles = Article::latest('published_at')->get();
+        $articles = Article::latest('published_at')->published()->get();
 
         return view('articles.index', compact('articles'));
     }
@@ -19,6 +20,8 @@ class ArticlesController extends Controller
     public function show($id)
     {
         $article = Article::findOrFail($id);
+
+        dd($article->published_at->addDays(8)->format('Y-m-d')); // ->diffForHumans()
 
         return view('articles.show', compact('article'));
     }
@@ -29,13 +32,20 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
-    public function store()
+
+    public function store(CreateArticleRequest $request) // Request
     {
-        $input = Request::all();
-        $input['published_at'] = Carbon::now();
+        /*$this->validate($request, [
+            'title' => 'required|min:5',
+            'body' => 'required',
+            'published_at' => 'required|date'
+        ]);*/
+
+        //$input = Request::all();
+        //$input['published_at'] = Carbon::now();
 
         //Article::create($input);
-        $article = new Article($input);
+        $article = new Article($request->all());
         $article->save();
 
         return redirect('articles');

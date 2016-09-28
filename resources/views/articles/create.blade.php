@@ -17,9 +17,22 @@
         </div>
 
         <div class="form-group">
+            {!! Form::label('published_at', 'Publish on:') !!}
+            {!! Form::input('date', 'published_at', \Carbon\Carbon::now()->format('Y-m-d'), ['class' => 'form-control']) !!}
+        </div>
+
+        <div class="form-group">
             {!! Form::submit('Add Article', ['class' => 'btn btn-primary form-control']) !!}
         </div>
 
     {!! Form::close() !!}
+
+    @if ($errors->any())
+        <ul class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
 
 @stop
