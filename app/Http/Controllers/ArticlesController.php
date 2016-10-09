@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
+use App\Models\Article;
 use App\Http\Requests;
 use Carbon\Carbon;
 use App\Http\Requests\CreateArticleRequest;
@@ -14,7 +14,7 @@ class ArticlesController extends Controller
     {
         $articles = Article::latest('published_at')->published()->get();
 
-        return view('articles.index', compact('articles'));
+        return view('front.articles.index', compact('articles'));
     }
 
     public function show($id)
@@ -23,13 +23,13 @@ class ArticlesController extends Controller
 
         dd($article->published_at->addDays(8)->format('Y-m-d')); // ->diffForHumans()
 
-        return view('articles.show', compact('article'));
+        return view('front.articles.show', compact('article'));
     }
 
     public function create()
     {
         //$model = new App\Article()
-        return view('articles.create');
+        return view('front.articles.create');
     }
 
 
@@ -48,6 +48,6 @@ class ArticlesController extends Controller
         $article = new Article($request->all());
         $article->save();
 
-        return redirect('articles');
+        return redirect('front.articles');
     }
 }

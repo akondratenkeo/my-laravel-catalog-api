@@ -19,11 +19,11 @@ class PagesController extends Controller
             'Julia', 'Kostik', 'Roman', 'Zarina'
         ];
 
-        return view('pages.about', compact('first', 'last', 'people'));
+        return view('front.pages.about', compact('first', 'last', 'people'));
     }
 
     public function contacts()
     {
-        return view('pages.contacts');
+        return view('front.pages.contacts');
     }
 }
