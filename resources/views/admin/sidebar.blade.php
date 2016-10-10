@@ -5,7 +5,7 @@
                 <img src="/admin/images/avatar.jpg" alt="" />
             </span>
             <p class="admin-name"><strong>Alexander Kondratenko</strong></p>
-            <span class="admin-position">Manager</span>
+            <span class="admin-position">Administrator</span>
         </li>
         <li>
             <a href="/admin">

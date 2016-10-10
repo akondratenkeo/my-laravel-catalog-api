@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
 * {
   margin: 0;
   padding: 0;
 }
 body {
+    font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0;
     font-size: 14px;
     line-height: 1.6;
@@ -11,7 +14,7 @@ body {
 }
 h1 {
     font-family: inherit;
-    font-size: 36px;
+    font-size: 32px;
     margin:10px 0 5px 0;
     padding: 0;
     line-height: 1.1;
@@ -29,10 +32,6 @@ h1.underlined {
     padding-bottom: 10px;
     border-bottom: 1px solid #ddd;
 }
-.row-20 {
-    margin-left: -20px;
-    margin-right: -20px;
-}
 .sidebar {
     display: block;
     position: fixed;
@@ -40,11 +39,16 @@ h1.underlined {
     left: 0;
     bottom: 0;
     z-index: 1000;
+    width: 220px;
+    min-height: 1px;
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
     color: #DFE4ED;
     background-color: #233646;
+}
+.mini-navbar .sidebar {
+    width: 70px;
 }
 .sidebar .nav .nav-header {
     min-height: 155px;
@@ -85,25 +89,93 @@ h1.underlined {
 .sidebar .copyright {
     position: absolute;
     bottom: 0;
-    /*width: 100%;*/
+    width: 100%;
     margin: 0;
     padding: 14px 20px 14px 25px;
     color: #a7b1c2;
     font-weight: 600;
     background-color: #203140;
 }
-.main {
-    padding: 0 20px 20px 20px;
+.page-main {
+    position: relative;
+    min-height: 1px;
+    margin: 0 0 0 220px;
+    padding: 0 15px 20px 15px;
+}
+.mini-navbar .page-main {
+    margin: 0 0 0 70px;
 }
 nav.theme-default {
+    min-height: 53px;
     margin-bottom: 0;
     background-color: #f3f3f4;
     border: 0 solid transparent;
     border-bottom: 1px solid #e7eaec;
 }
+nav .navbar-header .minimize_btn {
+    margin-top: 11px;
+    padding: 3px 12px;
+    color: #fff;
+    background-color: #1ab394;
+    border-color: #1ab394;
+}
+ul.navbar-top-links > li {
+    display: inline-block;
+    float: left;
+    border-left: 1px solid #e7eaec;
+}
+ul.navbar-top-links > li > a {
+    position: relative;
+    padding: 16px 20px;
+    color: #999c9e;
+    font-weight: 700;
+}
+ul.navbar-top-links > li > a:hover,
+ul.navbar-top-links > li > a:focus {
+    background-color: #eaeaea;
+}
+ul.navbar-top-links li.profile-settings > a {
+    padding: 11px 15px;
+}
+ul.navbar-top-links li.profile-settings .avatar {
+    width: 32px;
+    height: 32px;
+    margin-right: 7px;
+    border-radius: 1000px;
+}
+ul.navbar-top-links li.profile-settings .name {
+    color: #999c9e;
+    padding-right: 3px;
+}
+ul.navbar-top-links li.profile-settings > .dropdown-menu {
+    padding: 0;
+    margin: 0;
+    min-width: 216px;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, .07);
+}
+li.messages .label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: .3em .4em .3em .4em;
+    line-height: 1;
+    border-radius: .75em;
+}
+li.notifications .label {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    padding: .3em .4em .3em .4em;
+    line-height: 1;
+    border-radius: .75em;
+}
+li.profile-settings > .dropdown-menu > li > a {
+    padding: 10px 20px;
+}
 .main-header-block {
     margin: 0;
-    padding: 10px 20px 20px 20px;
+    padding: 10px 15px 18px 15px;
     background-color: #fff;
     border-bottom: 1px solid #eee;
 }
@@ -180,8 +252,4 @@ nav.theme-default {
     background-color: #fff;
     border: 1px solid #ddd;
     border-bottom-color: #fff;
-}
-.nav>li>a:focus, .nav>li>a:hover {
-    text-decoration: none;
-    background-color: #f5f5f5;
 }

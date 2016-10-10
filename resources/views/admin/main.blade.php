@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/admin/css/vendor.css">
     <link rel="stylesheet" href="/admin/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/admin/css/styles.css">
+    <link rel="stylesheet" href="/admin/css/style-responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -21,19 +22,19 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
-				          @include('admin.sidebar')
+            <div class="sidebar">
+                @include('admin.sidebar')
             </div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <div class="row-20">
+            <div class="page-main">
+                <div class="row">
                     @include('admin.main-nav')
                 </div>
-                <div class="row-20">
+                <div class="row">
                     <div class="main-header-block">
                         <h1>@yield('h1-header')</h1>
-                        <ul class="breadcrumbs">
+                        <ol class="breadcrumbs">
                             @yield('breadcrumbs')
-                        </ul>
+                        </ol>
                     </div>
                 </div>
                 @yield('content')

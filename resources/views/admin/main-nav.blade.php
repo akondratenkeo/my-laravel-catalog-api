@@ -1,31 +1,24 @@
 <nav class="navbar theme-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Home</a>
+            <a class="minimize_btn btn btn-primary" href="#"><i class="fa fa-bars"></i></a>
         </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="messages"><a href="#"><i class="fa fa-envelope"></i><span class="label label-warning">77</span></a></li>
+            <li class="notifications"><a href="#"><i class="fa fa-bell"></i></a><span class="label label-primary">25</span></li>
+            <li class="dropdown profile-settings">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img class="avatar" src="/admin/images/avatar.jpg" alt="Profile">
+                    <span class="name">Alexander</span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-sign-out fa-lg"></i></a></li>
+        </ul>
     </div>
 </nav>
