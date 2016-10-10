@@ -1,20 +1,24 @@
 @extends('admin.main')
 
 @section('title', 'New Products')
+@section('h1-header', 'New Products')
+
+@section('breadcrumbs')
+  <li>Home</li>
+  <li>Products</li>
+  <li>New Product</li>
+@stop
 
 @section('content')
 
-    <h1>New Product</h1>
-
-    <div class="nav-submit">
-        <div class="nav-pull-right">
-            <button type="submit" form="form-product" data-toggle="tooltip" class="btn btn-primary" data-original-title="Save"><i class="fa fa-save"></i></button>
-            <a href="/admin/products" data-toggle="tooltip" class="btn btn-default" data-original-title="Cancel"><i class="fa fa-reply"></i></a>
-        </div>
-    </div>
-
     {!! Form::open(['url' => 'admin/products', 'method' => 'post', 'files' => true, 'class' => 'form-horizontal', 'id' => 'form-product']) !!}
         <div class="form-body">
+            <div class="nav-submit">
+                <div class="nav-pull-right">
+                    <button type="submit" form="form-product" data-toggle="tooltip" class="btn btn-primary" data-original-title="Save"><i class="fa fa-save"></i></button>
+                    <a href="/admin/products" data-toggle="tooltip" class="btn btn-default" data-original-title="Cancel"><i class="fa fa-reply"></i></a>
+                </div>
+            </div>
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General</a></li>
