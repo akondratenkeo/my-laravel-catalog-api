@@ -42,10 +42,11 @@ h1.underlined {
     width: 220px;
     min-height: 1px;
     padding: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
+    /*overflow-x: hidden;
+    overflow-y: auto;*/
     color: #DFE4ED;
     background-color: #233646;
+    transition: all 0.3s;
 }
 .mini-navbar .sidebar {
     width: 70px;
@@ -85,22 +86,42 @@ h1.underlined {
     line-height: 1;
     color: #8095a8;
 }
-.sidebar .nav > li > a {
+.sidebar .nav li a {
     padding: 14px 20px 14px 25px;
     color: #a7b1c2;
     font-weight: 600;
+    line-height: 1.42857;
     background-color: #293f50;
 }
-.sidebar .nav > li > a i {
+.sidebar .nav li a i {
     margin-right: 6px;
 }
-.mini-navbar .sidebar .nav > li > a i {
-    margin-right: 0px;
+.mini-navbar .sidebar .nav li a i {
+    margin-right: 0;
 }
-.sidebar .nav > li > a:hover,
-.sidebar .nav > li > a:focus {
+.sidebar .nav li a:hover {
     background-color: #293846;
     color: #fff;
+}
+.metismenu .collapse {
+    display: none;
+}
+.metismenu li.active {
+    border-left: 4px solid #1ab394;
+    transition: all 0.3s;
+}
+.metismenu li.active a {
+    background-color: #293846;
+}
+.metismenu .nav-second-level {
+    background-color: #293846;
+}
+.metismenu .nav-second-level li:last-child {
+    margin-bottom: 20px;
+}
+.metismenu .nav-second-level a {
+    font-size: 13px;
+    padding: 8px 20px 8px 51px !important;
 }
 .sidebar .copyright {
     position: absolute;
@@ -124,11 +145,28 @@ h1.underlined {
 .mini-navbar .sidebar .nav > li > a .nav-label {
     display: none;
 }
+.mini-navbar .sidebar .nav > li > a .fa.arrow {
+    display: none;
+}
+.mini-navbar .metismenu li .nav-second-level {
+    height: 0;
+}
+.mini-navbar .metismenu li.active .nav-second-level {
+    position: absolute;
+    top: 0;
+    left: 65px;
+    z-index: 100;
+    display: block;
+}
+/*.mini-navbar .metismenu li.active a:hover .nav-second-level {
+    display: block;
+}*/
 .page-main {
     position: relative;
     min-height: 1px;
     margin: 0 0 0 220px;
     padding: 0 15px 20px 15px;
+    transition: all 0.3s;
 }
 .mini-navbar .page-main {
     margin: 0 0 0 70px;
@@ -252,8 +290,10 @@ li.profile-settings > .dropdown-menu > li > a {
 }
 .form-body {
     margin-top: 20px;
-    padding: 20px;
+    padding: 14px 20px 20px 20px;
     background-color: #fff;
+    border: 1px solid #eee;
+    border-top: 3px solid #e5e5e5;
 }
 .form-body .tab-form-content {
     padding-top: 20px;
@@ -287,6 +327,6 @@ li.profile-settings > .dropdown-menu > li > a {
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     color: #555;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-bottom-color: #fff;
+    border: 0 solid #ddd;
+    border-bottom: 3px solid #1ab394;
 }

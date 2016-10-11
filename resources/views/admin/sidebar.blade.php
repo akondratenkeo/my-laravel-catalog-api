@@ -1,5 +1,5 @@
 <div class="sidebar-collapse">
-    <ul class="nav">
+    <ul class="nav metismenu" id="side-menu">
         <li class="nav-header">
             <div class="sidebar-profile-info">
                 <img src="/admin/images/avatar.jpg" alt="" />
@@ -15,10 +15,16 @@
             </a>
         </li>
         <li>
-            <a href="/admin/products">
+            <a href="#">
                 <i class="fa fa-diamond"></i>
                 <span class="nav-label">Products</span>
+                <span class="fa arrow"></span>
             </a>
+            <ul class="nav nav-second-level collapse">
+                <li><a href="#">Products list</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Manufacturers</a></li>
+            </ul>
         </li>
         <li>
             <a href="#">

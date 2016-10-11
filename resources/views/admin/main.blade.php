@@ -10,6 +10,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/admin/css/vendor.css">
     <link rel="stylesheet" href="/admin/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/admin/css/metis-menu.css">
     <link rel="stylesheet" href="/admin/css/styles.css">
     <link rel="stylesheet" href="/admin/css/style-responsive.css">
 
