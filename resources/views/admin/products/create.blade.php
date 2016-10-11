@@ -15,8 +15,14 @@
         <div class="form-body">
             <div class="nav-submit">
                 <div class="nav-pull-right">
-                    <button type="submit" form="form-product" data-toggle="tooltip" class="btn btn-primary" data-original-title="Save"><i class="fa fa-save"></i></button>
-                    <a href="/admin/products" data-toggle="tooltip" class="btn btn-default" data-original-title="Cancel"><i class="fa fa-reply"></i></a>
+                    <button type="submit" form="form-product" data-toggle="tooltip" class="btn btn-primary btn-submit" data-original-title="Save">
+                        <i class="fa fa-save"></i>
+                        <span class="btn-label">Save Product</span>
+                    </button>
+                    <a href="/admin/products" data-toggle="tooltip" class="btn btn-default btn-cancel" data-original-title="Cancel">
+                        <i class="fa fa-reply"></i>
+                        <span class="btn-label">Cancel</span>
+                    </a>
                 </div>
             </div>
             <!-- Nav tabs -->

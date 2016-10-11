@@ -55,7 +55,20 @@ h1.underlined {
     padding: 30px 25px;
     background: #2f4050 url('../images/patterns/header-profile.png') top center;
 }
-.nav-header span img {
+.nav-header .sidebar-logo-element {
+    display: none;
+}
+.mini-navbar .sidebar .nav .nav-header {
+    min-height: 55px;
+    padding: 17px 20px 16px 23px;
+}
+.mini-navbar .nav-header .sidebar-profile-info {
+    display: none;
+}
+.mini-navbar .nav-header .sidebar-logo-element {
+    display: block;
+}
+.nav-header img {
     width: 48px;
     height: 48px;
     border-radius: 1000px;
@@ -81,6 +94,9 @@ h1.underlined {
 .sidebar .nav > li > a i {
     margin-right: 6px;
 }
+.mini-navbar .sidebar .nav > li > a i {
+    margin-right: 0px;
+}
 .sidebar .nav > li > a:hover,
 .sidebar .nav > li > a:focus {
     background-color: #293846;
@@ -93,8 +109,20 @@ h1.underlined {
     margin: 0;
     padding: 14px 20px 14px 25px;
     color: #a7b1c2;
-    font-weight: 600;
+    font-weight: 700;
     background-color: #203140;
+}
+.mini-navbar .sidebar .copyright {
+    padding: 16px 10px 12px 10px;
+}
+.sidebar .copyright .company-name {
+    font-weight: 500;
+}
+.mini-navbar .sidebar .copyright .company-name {
+    display: none;
+}
+.mini-navbar .sidebar .nav > li > a .nav-label {
+    display: none;
 }
 .page-main {
     position: relative;
@@ -212,6 +240,15 @@ li.profile-settings > .dropdown-menu > li > a {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 100;
+}
+.nav-submit .nav-pull-right .btn-submit {
+    color: #fff;
+    background-color: #1ab394;
+    border-color: #1ab394;
+}
+.nav-submit .nav-pull-right span.btn-label {
+    display: none;
 }
 .form-body {
     margin-top: 20px;

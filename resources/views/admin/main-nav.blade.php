@@ -1,9 +1,9 @@
 <nav class="navbar theme-default">
     <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="navbar-header navbar-top-button">
             <a class="minimize_btn btn btn-primary" href="#"><i class="fa fa-bars"></i></a>
         </div>
-        <ul class="nav navbar-top-links navbar-right">
+        <ul class="nav navbar-right navbar-top-links">
             <li class="messages"><a href="#"><i class="fa fa-envelope"></i><span class="label label-warning">77</span></a></li>
             <li class="notifications"><a href="#"><i class="fa fa-bell"></i></a><span class="label label-primary">25</span></li>
             <li class="dropdown profile-settings">
