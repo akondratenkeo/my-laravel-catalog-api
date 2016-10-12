@@ -10,8 +10,16 @@ Route::get('articles/{id}', 'ArticlesController@show');
 Route::post('articles', 'ArticlesController@store');
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('products', 'Admin\Products\ProductsController@index');
-    Route::get('products/create', 'Admin\Products\ProductsController@create');
-    Route::get('products/{id}', 'Admin\Products\ProductsController@show');
-    Route::post('products', 'Admin\Products\ProductsController@store');
+    Route::get('/dashboard', 'Admin\DashboardController@index');
+
+    Route::group(['prefix' => 'catalog'], function () {
+      Route::get('/', function() {
+          return 'Test';
+      });
+
+      Route::get('products', 'Admin\Products\ProductsController@index');
+      Route::get('products/create', 'Admin\Products\ProductsController@create');
+      Route::get('products/{id}', 'Admin\Products\ProductsController@show');
+      Route::post('products', 'Admin\Products\ProductsController@store');
+    });
 });

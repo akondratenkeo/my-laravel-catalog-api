@@ -116,12 +116,12 @@ h1.underlined {
 .metismenu .nav-second-level {
     background-color: #293846;
 }
-.metismenu .nav-second-level li:last-child {
-    margin-bottom: 20px;
-}
-.metismenu .nav-second-level a {
+.metismenu .nav-second-level > li > a {
     font-size: 13px;
-    padding: 8px 20px 8px 51px !important;
+    padding: 8px 20px 8px 51px;
+}
+.metismenu .nav-second-level > li:last-child > a {
+    padding-bottom: 20px;
 }
 .sidebar .copyright {
     position: absolute;
@@ -156,11 +156,13 @@ h1.underlined {
     top: 0;
     left: 65px;
     z-index: 100;
-    display: block;
 }
-/*.mini-navbar .metismenu li.active a:hover .nav-second-level {
-    display: block;
-}*/
+.mini-navbar .metismenu li.active .nav-second-level > li > a {
+    padding-left: 20px;
+}
+.mini-navbar .metismenu li.active .nav-second-level > li:first-child > a {
+    padding-top: 20px;
+}
 .page-main {
     position: relative;
     min-height: 1px;

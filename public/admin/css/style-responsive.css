@@ -82,6 +82,9 @@
         min-height: 55px;
         padding: 17px 9px;
     }
+    .mini-navbar .metismenu li.active .nav-second-level {
+        left: 36px;
+    }
     ul.navbar-top-links li.profile-settings > .dropdown-menu {
         right: 0;
         left: auto;

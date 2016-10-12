@@ -9,7 +9,6 @@
   <li>New Product</li>
 @stop
 
-
 @section('content')
     <p>products will be here ...</p>
 @stop
