@@ -36,7 +36,12 @@
 
 /* BEGIN max width 992px */
 @media (max-width: 992px) {
-
+    .content-body .main-wrapper-content .table > thead > tr > th:nth-child(3),
+    .content-body .main-wrapper-content .table > thead > tr > th:nth-child(5),
+    .content-body .main-wrapper-content .table > tbody > tr > td:nth-child(3),
+    .content-body .main-wrapper-content .table > tbody > tr > td:nth-child(5) {
+        display: none;
+    }
 }
 /* END max width 992px */
 
@@ -95,7 +100,12 @@
 
 /* BEGIN max width 600px */
 @media (max-width: 600px) {
-
+    .content-body .main-wrapper-content .table > thead > tr > th:nth-child(4),
+    .content-body .main-wrapper-content .table > thead > tr > th:nth-child(6),
+    .content-body .main-wrapper-content .table > tbody > tr > td:nth-child(4),
+    .content-body .main-wrapper-content .table > tbody > tr > td:nth-child(6) {
+        display: none;
+    }
 }
 /* END max width 600px */
 
@@ -111,14 +121,30 @@
         padding-bottom: 8px;
         text-align: right;
     }
-    .nav-submit .nav-pull-right .btn-cancel {
-        padding: 6px 24px;
-    }
     .nav-submit .nav-pull-right i {
         display: none;
     }
     .nav-submit .nav-pull-right span.btn-label {
         display: block;
+    }
+    .nav-submit .mw-title-navigation i {
+        display: block;
+    }
+    .nav-submit .mw-title-navigation span.btn-label-visible {
+        display: none;
+    }
+    .nav-submit .mw-title-navigation .btn-submit > i  {
+        position: inherit;
+        top: inherit;
+        left: inherit;
+    }
+    .nav-submit .mw-title-navigation {
+        position: absolute;
+        top: -7px;
+        right: 0;
+        z-index: 100;
+        padding-bottom: 0;
+        text-align: inherit;
     }
 }
 /* END max width 480px */
@@ -137,15 +163,24 @@
 
 /* BEGIN max width 390px */
 @media (max-width: 390px) {
-  ul.navbar-top-links li > a {
+    ul.navbar-top-links li > a {
       padding: 16px 15px;
-  }
-  ul.navbar-top-links li.profile-settings > a {
+    }
+    ul.navbar-top-links li.profile-settings > a {
       padding: 11px 10px;
-  }
-  ul.navbar-top-links li.profile-settings .avatar {
+    }
+    ul.navbar-top-links li.profile-settings .avatar {
       margin-right: 3px;
-  }
+    }
+    .content-body .main-wrapper-content .table .btn {
+        border-bottom-left-radius: 3px !important;
+        border-top-left-radius: 3px !important;
+        border-bottom-right-radius: 3px !important;
+        border-top-right-radius: 3px !important;
+    }
+    .content-body .main-wrapper-content .nav.nav-tabs > li > a {
+        padding: 10px 10px;
+    }
 }
 /* END max width 390px */
 

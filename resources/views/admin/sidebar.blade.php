@@ -6,7 +6,7 @@
                 <p class="admin-name"><strong>Alexander Kondratenko</strong></p>
                 <span class="admin-position">Administrator</span>
             </div>
-            <div class="sidebar-logo-element">IN+</div>
+            <div class="sidebar-logo-element">BE+</div>
         </li>
         <li>
             <a href="/admin/dashboard">
