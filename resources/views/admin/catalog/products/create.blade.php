@@ -11,7 +11,7 @@
 
 @section('content')
 
-    {!! Form::open(['url' => 'admin/products', 'method' => 'post', 'files' => true, 'class' => 'form-horizontal', 'id' => 'form-product']) !!}
+    {!! Form::open(['url' => '/admin/catalog/products', 'method' => 'post', 'files' => true, 'class' => 'form-horizontal', 'id' => 'form-product']) !!}
         <div class="col-xs-12 content-body">
             <div class="nav-submit">
                 <div class="nav-pull-right">
