@@ -11,11 +11,11 @@
 
 @section('content')
 
-    {!! Form::open(['url' => '/admin/catalog/products', 'method' => 'post', 'files' => true, 'class' => 'form-horizontal', 'id' => 'form-product']) !!}
+    {!! Form::open(['url' => '/admin/catalog/products', 'method' => 'post', 'files' => true, 'class' => 'form-horizontal', 'id' => 'add-entity-form']) !!}
         <div class="col-xs-12 content-body">
             <div class="nav-submit">
                 <div class="nav-pull-right">
-                    <button type="submit" form="form-product" data-toggle="tooltip" class="btn btn-primary btn-submit" data-original-title="Save">
+                    <button type="submit" form="add-entity-form" data-toggle="tooltip" class="btn btn-primary btn-submit" data-original-title="Save">
                         <i class="fa fa-save"></i>
                         <span class="btn-label">Save Product</span>
                     </button>
@@ -90,6 +90,10 @@
                             {!! Form::label('params', 'Params:', ['class' => 'col-sm-2 control-label']) !!}
                             <div class="col-sm-10">{!! Form::textarea('params', null, ['class' => 'form-control', 'rows' => '3']) !!}</div>
                         </div>
+                        <div class="form-group">
+                            {!! Form::label('sort_order', 'Sort Order:', ['class' => 'col-sm-2 control-label']) !!}
+                            <div class="col-sm-10">{!! Form::text('sort_order', null, ['class' => 'form-control']) !!}</div>
+                        </div>
                         <div class="form-group required">
                             {!! Form::label('visible', 'Status:', ['class' => 'col-sm-2 control-label']) !!}
                             <div class="col-sm-10">
@@ -103,14 +107,14 @@
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="images">
-                        <div class="form-group required">
+                        <div class="form-group">
                             {!! Form::label('image', 'Image:', ['class' => 'col-sm-2 control-label']) !!}
                             <div class="col-sm-10">
-                                <div class="product-image clearfix">
-                                    <img src="../images/no-photo.jpg" alt="product-image">
+                                <div class="entity-image clearfix">
+                                    <img src="../../images/no-photo.jpg" alt="entity-image">
                                 </div>
-                                <div class="input-product-image">
-                                    {!! Form::file('image', ['id' => 'file-product-image']) !!}
+                                <div class="input-entity-image">
+                                    {!! Form::file('image', ['id' => 'file-entity-image']) !!}
                                 </div>
                             </div>
                         </div>

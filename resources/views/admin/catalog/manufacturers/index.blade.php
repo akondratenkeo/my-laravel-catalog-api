@@ -29,62 +29,24 @@
                     <tr>
                         <th>#</th>
                         <th>Name<span class="fa fa-caret-down"></span></th>
-                        <th>Brand<span class="fa fa-caret-down"></span></th>
-                        <th>Price<span class="fa fa-caret-down"></span></th>
-                        <th>Quantity<span class="fa fa-caret-down"></span></th>
-                        <th>Status<span class="fa fa-caret-down"></span></th>
+                        <th class="hide-480">Sort Order<span class="fa fa-caret-down"></span></th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Example manufacturer 9</td>
-                        <td>Brand</td>
-                        <td>$150.00</td>
-                        <td>450</td>
-                        <td>
-                            <span class="label label-primary">Enable</span>
-                        </td>
-                        <td>
-                            <div class="btn-group btn-group-xs" role="group" aria-label="Action">
-                                <a href="/admin/catalog/manufacturers/1" class="btn btn-warning">Edit</a>
-                                <a href="#" class="btn btn-default">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Example manufacturer 14</td>
-                        <td>Brand</td>
-                        <td>$98.00</td>
-                        <td>61</td>
-                        <td>
-                            <span class="label label-danger">Disable</span>
-                        </td>
-                        <td>
-                            <div class="btn-group btn-group-xs" role="group" aria-label="Action">
-                                <a href="/admin/catalog/manufacturers/2" class="btn btn-warning">Edit</a>
-                                <a href="#" class="btn btn-default">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Example manufacturer 33</td>
-                        <td>Brand</td>
-                        <td>$87.00</td>
-                        <td>55</td>
-                        <td>
-                            <span class="label label-primary">Enable</span>
-                        </td>
-                        <td>
-                            <div class="btn-group btn-group-xs" role="group" aria-label="Action">
-                                <a href="/admin/catalog/manufacturers/3" class="btn btn-warning">Edit</a>
-                                <a href="#" class="btn btn-default">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
+                    @foreach ($manufacturers as $i => $item)
+                        <tr>
+                            <td>{{ $i + 1 }}</td>
+                            <td>{{ $item->name }}</td>
+                            <td class="hide-480">{{ $item->sort_order }}</td>
+                            <td>
+                                <div class="btn-group btn-group-xs" role="group" aria-label="Action">
+                                    <a href="/admin/catalog/manufacturers/{{ $item->id }}/edit" class="btn btn-warning">Edit</a>
+                                    <a href="#" class="btn btn-default">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
             <nav aria-label="Page navigation">

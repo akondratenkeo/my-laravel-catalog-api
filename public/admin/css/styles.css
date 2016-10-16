@@ -390,14 +390,20 @@ li.profile-settings > .dropdown-menu > li > a {
     color: #ff3300;
     font-weight: bold;
 }
-.tab-form-content .product-image {
+.content-body .tab-form-content .errors {
+    margin-bottom: 0;
+}
+.content-body .tab-form-content .errors li {
+    margin-left: 15px;
+}
+.tab-form-content .entity-image {
     position: relative;
     width: 120px;
     height: 110px;
     overflow: hidden;
     border: 1px solid #ddd;
 }
-.tab-form-content .product-image img {
+.tab-form-content .entity-image img {
     position: absolute;
     max-width: 120px;
     max-height: 110px;
@@ -407,7 +413,7 @@ li.profile-settings > .dropdown-menu > li > a {
     bottom: 0;
     margin: auto;
 }
-.tab-form-content .input-product-image {
+.tab-form-content .input-entity-image {
     margin-top: 15px;
     margin-bottom: 15px;
 }

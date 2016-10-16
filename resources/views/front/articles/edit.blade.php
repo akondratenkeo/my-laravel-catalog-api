@@ -2,13 +2,13 @@
 
 @section('content')
 
-    <h1>New Article</h1>
+    <h1>Update Article</h1>
     <hr />
 
-    {!! Form::open(['url' => 'articles']) !!}
+    {!! Form::model($article, ['action' => ['ArticlesController@update', $article->id], 'method' => 'PATCH']) !!}
 
         @include('front.articles._form', [
-            'submitButton' => 'Add Article'
+            'submitButton' => 'Edit Article'
         ])
 
     {!! Form::close() !!}

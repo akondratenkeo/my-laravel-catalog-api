@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
+use App\Models\Catalog\Manufacturers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,7 +17,8 @@ class ManufacturersController extends Controller
      */
     public function index()
     {
-        return view('admin.catalog.manufacturers.index');
+        $manufacturers = Manufacturers::all();
+        return view('admin.catalog.manufacturers.index', compact('manufacturers'));
     }
 
     /**
@@ -37,7 +39,21 @@ class ManufacturersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|string|min:3|max:50',
+            'description' => 'required|string|max:1000',
+            'sort_order' => 'integer',
+            'meta_title' => 'required|string|min:3|max:150',
+            'meta_description' => 'string',
+        ]);
+
+        $input = $request->all();
+
+        $model = new Manufacturers();
+        $model->loadModel($input);
+        $model->save();
+
+        return redirect()->action('Admin\Catalog\ManufacturersController@index');
     }
 
     /**
@@ -59,6 +75,7 @@ class ManufacturersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $manufacturer = Manufacturers::findOrFail($id);
+        return view('admin.catalog.manufacturers.edit', compact('manufacturer'));
     }
 }

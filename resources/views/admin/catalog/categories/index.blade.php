@@ -29,23 +29,15 @@
                     <tr>
                         <th>#</th>
                         <th>Name<span class="fa fa-caret-down"></span></th>
-                        <th>Brand<span class="fa fa-caret-down"></span></th>
-                        <th>Price<span class="fa fa-caret-down"></span></th>
-                        <th>Quantity<span class="fa fa-caret-down"></span></th>
-                        <th>Status<span class="fa fa-caret-down"></span></th>
+                        <th class="hide-480">Sort Order<span class="fa fa-caret-down"></span></th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Example category 9</td>
-                        <td>Brand</td>
-                        <td>$150.00</td>
-                        <td>450</td>
-                        <td>
-                            <span class="label label-primary">Enable</span>
-                        </td>
+                        <td>Laptops & Notebooks</td>
+                        <td class="hide-480">10</td>
                         <td>
                             <div class="btn-group btn-group-xs" role="group" aria-label="Action">
                                 <a href="/admin/catalog/categories/1" class="btn btn-warning">Edit</a>
@@ -55,13 +47,8 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Example category 14</td>
-                        <td>Brand</td>
-                        <td>$98.00</td>
-                        <td>61</td>
-                        <td>
-                            <span class="label label-danger">Disable</span>
-                        </td>
+                        <td>MP3 Players</td>
+                        <td class="hide-480">20</td>
                         <td>
                             <div class="btn-group btn-group-xs" role="group" aria-label="Action">
                                 <a href="/admin/catalog/categories/2" class="btn btn-warning">Edit</a>
@@ -71,13 +58,8 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Example category 33</td>
-                        <td>Brand</td>
-                        <td>$87.00</td>
-                        <td>55</td>
-                        <td>
-                            <span class="label label-primary">Enable</span>
-                        </td>
+                        <td>Printers</td>
+                        <td class="hide-480">30</td>
                         <td>
                             <div class="btn-group btn-group-xs" role="group" aria-label="Action">
                                 <a href="/admin/catalog/categories/3" class="btn btn-warning">Edit</a>

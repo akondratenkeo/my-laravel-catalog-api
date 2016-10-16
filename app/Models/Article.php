@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     protected $fillable = [
-        'title', 'body', 'published_at',
+        'title',
+        'body',
+        'published_at',
+        'user_id', // temporary
     ];
 
     protected $dates = ['published_at'];
@@ -26,5 +29,10 @@ class Article extends Model
     public function setPublishedAtAttribute($date)
     {
         $this->attributes['published_at'] = Carbon::parse($date); // Carbon::createFromFormat('Y-m-d', $date);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

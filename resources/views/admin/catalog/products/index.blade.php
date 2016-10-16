@@ -29,10 +29,10 @@
                     <tr>
                         <th>#</th>
                         <th>Name<span class="fa fa-caret-down"></span></th>
-                        <th>Brand<span class="fa fa-caret-down"></span></th>
-                        <th>Price<span class="fa fa-caret-down"></span></th>
-                        <th>Quantity<span class="fa fa-caret-down"></span></th>
-                        <th>Status<span class="fa fa-caret-down"></span></th>
+                        <th class="hide-992">Brand<span class="fa fa-caret-down"></span></th>
+                        <th class="hide-600">Price<span class="fa fa-caret-down"></span></th>
+                        <th class="hide-992">Quantity<span class="fa fa-caret-down"></span></th>
+                        <th class="hide-600">Status<span class="fa fa-caret-down"></span></th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -40,10 +40,10 @@
                     <tr>
                         <td>1</td>
                         <td>Example product 9</td>
-                        <td>Brand</td>
-                        <td>$150.00</td>
-                        <td>450</td>
-                        <td>
+                        <td class="hide-992">Brand</td>
+                        <td class="hide-600">$150.00</td>
+                        <td class="hide-992">450</td>
+                        <td class="hide-600">
                             <span class="label label-primary">Enable</span>
                         </td>
                         <td>
@@ -56,10 +56,10 @@
                     <tr>
                         <td>2</td>
                         <td>Example product 14</td>
-                        <td>Brand</td>
-                        <td>$98.00</td>
-                        <td>61</td>
-                        <td>
+                        <td class="hide-992">Brand</td>
+                        <td class="hide-600">$98.00</td>
+                        <td class="hide-992">61</td>
+                        <td class="hide-600">
                             <span class="label label-danger">Disable</span>
                         </td>
                         <td>
@@ -72,10 +72,10 @@
                     <tr>
                         <td>3</td>
                         <td>Example product 33</td>
-                        <td>Brand</td>
-                        <td>$87.00</td>
-                        <td>55</td>
-                        <td>
+                        <td class="hide-992">Brand</td>
+                        <td class="hide-600">$87.00</td>
+                        <td class="hide-992">55</td>
+                        <td class="hide-600">
                             <span class="label label-primary">Enable</span>
                         </td>
                         <td>
