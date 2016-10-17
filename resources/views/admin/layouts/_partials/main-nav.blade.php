@@ -9,7 +9,7 @@
             <li class="dropdown profile-settings">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img class="avatar" src="<?= asset('admin-be/images/avatar.jpg'); ?>" alt="Profile">
-                    <span class="name">Alexander</span>
+                    <span class="name">{{ Auth::user()->username }}</span>
                     <i class="fa fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu">
