@@ -2,7 +2,7 @@
     <ul class="nav metismenu" id="side-menu">
         <li class="nav-header">
             <div class="sidebar-profile-info">
-                <img src="/admin/images/avatar.jpg" alt="" />
+                <img src="<?= asset('admin-be/images/avatar.jpg'); ?>" alt="" />
                 <p class="admin-name"><strong>Alexander Kondratenko</strong></p>
                 <span class="admin-position">Administrator</span>
             </div>

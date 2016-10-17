@@ -8,7 +8,7 @@
             <li class="notifications"><a href="#"><i class="fa fa-bell"></i></a><span class="label label-primary">25</span></li>
             <li class="dropdown profile-settings">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img class="avatar" src="/admin/images/avatar.jpg" alt="Profile">
+                    <img class="avatar" src="<?= asset('admin-be/images/avatar.jpg'); ?>" alt="Profile">
                     <span class="name">Alexander</span>
                     <i class="fa fa-angle-down"></i>
                 </a>
@@ -18,7 +18,12 @@
                     <li><a href="#">Help</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fa fa-sign-out fa-lg"></i></a></li>
+            <li>
+                <a href="{{ url('/admin/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-lg"></i></a>
+                <form id="logout-form" action="{{ url('/admin/logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            </li>
         </ul>
     </div>
 </nav>

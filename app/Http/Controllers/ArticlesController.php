@@ -21,14 +21,13 @@ class ArticlesController extends Controller
     {
         $article = Article::findOrFail($id);
 
-        dd($article->published_at->addDays(8)->format('Y-m-d')); // ->diffForHumans()
+        //dd($article->published_at->addDays(8)->format('Y-m-d')); // ->diffForHumans()
 
         return view('front.articles.show', compact('article'));
     }
 
     public function create()
     {
-        //$model = new App\Article()
         return view('front.articles.create');
     }
 
@@ -41,12 +40,17 @@ class ArticlesController extends Controller
             'published_at' => 'required|date'
         ]);*/
 
-        //$input = Request::all();
-        //$input['published_at'] = Carbon::now();
+        /*$input = $request->all();
+        $input['user_id'] = \Auth::user()->id;
 
         //Article::create($input);
-        $article = new Article($request->all());
-        $article->save();
+        $article = new Article($input);
+        $article->save();*/
+
+        $input = $request->all();
+        $article = new Article($input);
+
+        \Auth::user()->articles()->save($article);
 
         return redirect('articles');
     }

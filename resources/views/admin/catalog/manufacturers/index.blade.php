@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.layouts.main')
 
 @section('title', 'Manufacturers')
 @section('h1-header', 'Manufacturers')

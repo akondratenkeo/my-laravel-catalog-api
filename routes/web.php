@@ -6,19 +6,17 @@ Route::get('contacts', 'PagesController@contacts');
 
 Route::resource('articles', 'ArticlesController');
 
-/*Route::controller([
-    'auth' => 'Auth\LoginController',
-    'password' => 'Auth\ResetPasswordController',
-]);*/
-
 Route::group(['prefix' => 'admin'], function () {
 
-    Route::get('/dashboard', 'Admin\DashboardController@index');
+    Auth::routes();
+    Route::get('/', 'Admin\AdminController@index');
+
+    Route::get('dashboard', 'Admin\DashboardController@index');
 
     Route::group(['prefix' => 'catalog'], function () {
 
         Route::get('/', function() {
-          return 'Test';
+          return redirect()->action('Admin\Catalog\ProductsController@index');
         });
 
         Route::get('products', 'Admin\Catalog\ProductsController@index');
@@ -38,7 +36,3 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('manufacturers', 'Admin\Catalog\ManufacturersController@store');
     });
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
