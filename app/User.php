@@ -44,4 +44,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Article');
     }
+
+    public function isATeamManager()
+    {
+        return false;
+    }
 }

@@ -36,3 +36,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('manufacturers', 'Admin\Catalog\ManufacturersController@store');
     });
 });
+
+Route::get('foo', function() {
+    return 'this page only be viewed by managers';
+})->middleware('manager');
