@@ -50,6 +50,12 @@
 
 /* BEGIN max width 767px */
 @media (max-width: 767px) {
+    #home-layout .auth-content {
+        padding-top: 20px;
+    }
+    #home-layout .auth-content h1 {
+        font-size: 160px;
+    }
     .sidebar {
         display: none;
         z-index: 2000;
@@ -160,6 +166,12 @@
 
 /* BEGIN max width 390px */
 @media (max-width: 390px) {
+    #home-layout .auth-content {
+        padding-top: 5px;
+    }
+    #home-layout .auth-content h1 {
+        font-size: 120px;
+    }
     ul.navbar-top-links li > a {
       padding: 16px 15px;
     }

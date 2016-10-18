@@ -28,24 +28,26 @@
     <script> window.Laravel = <?= json_encode(['csrfToken' => csrf_token()]); ?> </script>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="sidebar">
-                @include('admin.layouts._partials.sidebar')
-            </div>
-            <div class="page-main">
-                <div class="row">
-                    @include('admin.layouts._partials.main-nav')
+    <div class="main-layout">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="sidebar">
+                    @include('admin.layouts._partials.sidebar')
                 </div>
-                <div class="row">
-                    <div class="main-header-block">
-                        <h1>@yield('h1-header')</h1>
-                        <ol class="breadcrumbs">
-                            @yield('breadcrumbs')
-                        </ol>
+                <div class="page-main">
+                    <div class="row">
+                        @include('admin.layouts._partials.main-nav')
                     </div>
+                    <div class="row">
+                        <div class="main-header-block">
+                            <h1>@yield('h1-header')</h1>
+                            <ol class="breadcrumbs">
+                                @yield('breadcrumbs')
+                            </ol>
+                        </div>
+                    </div>
+                    @yield('content')
                 </div>
-                @yield('content')
             </div>
         </div>
     </div>

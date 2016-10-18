@@ -28,6 +28,14 @@ h2 {
     line-height: 1.1;
     color: #666;
 }
+h3 {
+    font-family: inherit;
+    font-size: 28px;
+    margin: 0 0 15px 0;
+    padding: 0;
+    line-height: 1.1;
+    color: #666;
+}
 h5 {
     font-family: inherit;
     font-size: 14px;
@@ -64,6 +72,30 @@ h1.underlined {
     background-color: #F86A1C;
     border-color: #F86A1C;
 }
+.btn-primary {
+    background-color: #18a689;
+    border-color: #18a689;
+    color: #FFFFFF;
+}
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:hover,
+.open>.btn-primary.dropdown-toggle,
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.btn-primary.dropdown-toggle.focus,
+.open>.btn-primary.dropdown-toggle:focus,
+.open>.btn-primary.dropdown-toggle:hover {
+    background-color: #18a689;
+    border-color: #18a689;
+    color: #FFFFFF;
+}
 .label-primary, .badge-primary {
     background-color: #1ab394;
     color: #FFFFFF;
@@ -75,6 +107,75 @@ h1.underlined {
 .label-danger, .badge-danger {
     background-color: #ed5565;
     color: #FFFFFF;
+}
+.form-control:focus {
+    border-color: #1ab394 !important;
+}
+#home-layout .auth-content {
+    padding-top: 40px;
+}
+#home-layout .auth-content h1 {
+    font-size: 180px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #e5e5e5;
+    text-align: center;
+}
+#home-layout .auth-content h3 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+#home-layout .auth-content .sub-content {
+    font-size: 13px;
+    text-align: center;
+}
+#home-layout .auth-content .forgot-link {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+#home-layout .auth-content .last-group-fix {
+    margin-bottom: 10px;
+}
+#home-layout .auth-content .after-form-content {
+    margin: 0 0 7px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+#home-layout .auth-content .after-register-form-content {
+    margin: 7px 0 11px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+}
+#home-layout .auth-content .register-link {
+    display: block;
+    text-align: center;
+}
+#home-layout .auth-content .copy-write {
+    margin: 20px 0 5px;
+    font-size: 11px;
+    text-align: center;
+}
+#home-layout .auth-content .email-panel {
+    margin-top: 60px;
+    border-color: #eee;
+}
+#home-layout .auth-content .email-panel h3 {
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+    text-align: left;
+}
+#home-layout .auth-content .email-panel p {
+    margin: 0 0 2px;
+    font-size: 13px;
+    color: #777;
+    text-align: left;
+}
+#home-layout .auth-content .email-panel .panel-heading {
+    border-bottom: 0 solid transparent;
 }
 .sidebar {
     display: block;

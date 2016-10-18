@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="/admin-be/css/vendor.css">
@@ -28,15 +28,14 @@
     <script> window.Laravel = <?= json_encode(['csrfToken' => csrf_token()]); ?> </script>
 </head>
 <body>
-    <div id="app">
+    <div id="home-layout">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 auth-content">
                     @yield('content')
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- Scripts -->
