@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
-})->middleware('auth:api');
+})->middleware('auth.basic.once:api');
 
 Route::resource('products', 'Api\ProductsAPIController', [
     'except' => ['create', 'edit'],
