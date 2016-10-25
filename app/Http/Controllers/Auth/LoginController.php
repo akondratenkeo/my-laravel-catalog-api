@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -46,6 +47,20 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return view('admin.auth.login');
+    }
+
+    /**
+     * Validate the user login request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return void
+     */
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email|max:255',
+            'password' => 'required|min:6',
+        ]);
     }
 
     /**

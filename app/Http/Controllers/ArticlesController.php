@@ -10,6 +10,14 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     */
+    public function __construct()
+    {
+        $this->middleware('demo', ['only' => 'create']);
+    }
+
     public function index()
     {
         $articles = Article::latest('published_at')->published()->get();

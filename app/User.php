@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Mail\Notifications\ResetPasswordNotification;
+
 
 class User extends Authenticatable
 {
@@ -27,8 +29,34 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
+    }
+
     public function articles()
     {
         return $this->hasMany('App\Models\Article');
+    }
+
+    public function isATeamManager()
+    {
+        return false;
+    }
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'email';
     }
 }

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin\Catalog;
 
 use App\Models\Catalog\Manufacturers;
+use App\Http\Requests\Admin\ManufacturersRequest;
 use Illuminate\Http\Request;
 
+use Validator;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -13,10 +15,10 @@ class ManufacturersController extends Controller
     /**
      * Create a new controller instance.
      */
-    public function __construct()
+    /*public function __construct()
     {
         $this->middleware('auth');
-    }
+    }*/
 
     /**
      * Display a listing of the resource.
@@ -47,13 +49,17 @@ class ManufacturersController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $validator = Validator::make($request->all(), [
             'name' => 'required|string|min:3|max:50',
             'description' => 'required|string|max:1000',
             'sort_order' => 'integer',
             'meta_title' => 'required|string|min:3|max:150',
             'meta_description' => 'string',
         ]);
+
+        if ($validator->fails()) {
+            return redirect('admin/catalog/manufacturers/create')->withErrors($validator)->withInput();
+        }
 
         $input = $request->all();
 
