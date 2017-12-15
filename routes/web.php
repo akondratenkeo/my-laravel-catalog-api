@@ -6,6 +6,40 @@ Route::get('contacts', 'PagesController@contacts');
 
 Route::resource('articles', 'ArticlesController');
 
+Route::get('/redirect', function () {
+    return response()->file(storage_path('app/') .'Fallout_3_Stickers.jpg');
+});
+
+Route::group([
+    'as' => 'test.',
+    'prefix' => 'test',
+    'namespace' => 'Test',
+    'middleware' => 'auth'
+
+], function() {
+    Route::get('/', 'TestController@index');
+    Route::get('/foo', 'TestController@foo');
+    Route::get('/bar', 'TestController@bar');
+
+    Route::group([
+        'as' => 'more.',
+        'prefix' => 'more'
+
+    ], function() {
+        Route::get('/', 'TestController@index')->name('index');
+        Route::get('/foo', 'TestController@foo')->name('foo');
+        Route::get('/bar', 'TestController@bar')->name('bar');
+    });
+
+    Route::get('/users/{user}', function (App\User $user) {
+        return $user->email;
+    });
+
+    Route::get('/profile/{user}', function (App\User $dd) {
+        dd($dd);
+    });
+});
+
 Route::group(['prefix' => 'admin'], function () {
 
     Auth::routes();

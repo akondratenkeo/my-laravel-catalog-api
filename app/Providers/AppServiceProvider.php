@@ -26,5 +26,21 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment() !== 'production') {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         }
+
+        $this->app->bind('helps', function() {
+
+            return new class {
+
+                private $demo = 'Helps::test()';
+
+                public function test()
+                {
+                    echo $this->demo;
+                }
+            };
+        });
+
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Helps', \App\Facades\Helps::class);
     }
 }
